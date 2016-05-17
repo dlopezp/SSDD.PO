@@ -1,5 +1,11 @@
+package nomeolvides.entities;
+
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -12,7 +18,7 @@ public class Lista {
 	private String name;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	private Item items;
+	private List<Item> items;
 
 	public Lista() {
 	}
@@ -33,11 +39,11 @@ public class Lista {
 		this.name = name;
 	}
 
-	public Item getItems() {
+	public List<Item> getItems() {
 		return items;
 	}
 
-	public void setItems(Item items) {
+	public void setItems(List<Item> items) {
 		this.items = items;
 	}
 
