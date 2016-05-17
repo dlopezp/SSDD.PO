@@ -12,7 +12,12 @@ import javax.persistence.OneToMany;
 @Entity
 public class Lista {
 
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
+
 	private String user;
 
 	private String name;
@@ -23,6 +28,13 @@ public class Lista {
 	public Lista() {
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getUser() {
 		return user;
 	}

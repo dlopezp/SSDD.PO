@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 import nomeolvides.entities.Lista;
 
 @Component
-public interface ListaRepository extends JpaRepository<Lista, String> {
+public interface ListaRepository extends JpaRepository<Lista, Long> {
 
 	List<Lista> findByUser(String user);
+
+
 }
